@@ -1,4 +1,4 @@
-# LibraLink API Developer's Guide
+# LibraLink API
 
 --- 
 
