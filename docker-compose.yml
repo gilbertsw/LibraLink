@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:10.11
+    container_name: mariadb-dev
+    restart: on-failure
+    ports:
+      - '3306:3306'
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_USER: root
+      MARIADB_PASSWORD: root
+      MARIADB_DATABASE: LibraLinkDB
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - backend
+
+  adminer:
+    image: adminer
+    restart: on-failure
+    ports:
+      - '10001:8080'
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  redis:
+    image: redis:alpine
+    container_name: redis-dev
+    ports:
+      - '6379:6379'
+    command: ["redis-server", "--requirepass", "root"]
+    volumes:
+      - redis_data:/data
+    networks:
+      - backend
+
+volumes:
+  db_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  backend:
+    driver: bridge
