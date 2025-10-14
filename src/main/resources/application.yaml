@@ -92,6 +92,7 @@ endpoint:
 
   admin:
     base: /admin
+    user-security-policy: ${endpoint.admin.base}/user-security-policies
     users: ${endpoint.admin.base}/users
     book: ${endpoint.admin.base}/books
     borrowing: ${endpoint.admin.base}/borrowings
