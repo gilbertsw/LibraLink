@@ -1,6 +1,6 @@
 -- password: admin123
 INSERT INTO `users` (`id`, `created_by`, `created_date`, `updated_by`, `updated_date`, `name`, `email`, `password`, `role`, `status`) VALUES
-(1,'SYSTEM','22025-10-12 20:00:00.000','SYSTEM','2025-10-12 20:00:00.000','Super Admin','adminlibralink@mailinator.com', '$2a$12$nL.jPW/nbLP2t.k/4ThkWOfI1lRb7e0FCvqH3P2NpTK67WHzTtXQe', 'ADMIN', 'ENABLED');
+(1,'SYSTEM','2025-10-12 20:00:00.000','SYSTEM','2025-10-12 20:00:00.000','Super Admin','adminlibralink@mailinator.com', '$2a$12$nL.jPW/nbLP2t.k/4ThkWOfI1lRb7e0FCvqH3P2NpTK67WHzTtXQe', 'ADMIN', 'ENABLED');
 
 INSERT INTO user_security_policies (`id`, `created_by`, `created_date`, `updated_by`, `updated_date`, password_min_length, max_failed_login_attempt, min_password_reuse_interval, prevent_username_as_password, password_must_contain_uppercase, password_must_contain_lowercase, password_must_contain_number, password_must_contain_special_char) VALUES
 (1,'SYSTEM','2025-10-12 20:00:00.000','SYSTEM','2025-10-12 20:00:00.000', 8, 5, 3, FALSE, TRUE, FALSE, FALSE, FALSE);
