@@ -3,6 +3,7 @@ package id.co.libralink.apigateway.account.service.impl;
 import id.co.libralink.apigateway.account.mapper.UserDetailMapper;
 import id.co.libralink.apigateway.account.mapper.UserListMapper;
 import id.co.libralink.apigateway.account.mapper.UserRequestMapper;
+import id.co.libralink.apigateway.account.enums.UserRole;
 import id.co.libralink.apigateway.account.model.request.SearchUserRequest;
 import id.co.libralink.apigateway.account.model.request.UserRequest;
 import id.co.libralink.apigateway.account.model.response.UserDetailResponse;
@@ -11,7 +12,7 @@ import id.co.libralink.apigateway.account.query.UserQuery;
 import id.co.libralink.common.constant.CommonConstant;
 import id.co.libralink.common.query.SearchQuery;
 import id.co.libralink.apigateway.account.model.entity.User;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import id.co.libralink.apigateway.account.repository.UserRepository;
 import id.co.libralink.apigateway.account.service.UserService;
 import id.co.libralink.common.util.PaginationUtil;
@@ -22,7 +23,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.EnumSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 @RequiredArgsConstructor
@@ -74,6 +77,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findActiveUserByEmail(String email) {
         return userRepository.findByEmailAndStatusIsIn(email, UserStatus.ACTIVE_STATUSES);
+    }
+
+    @Override
+    public Integer countByRoleAndStatus(Set<UserRole> roles, Set<UserStatus> statuses) {
+        if (roles == null || roles.isEmpty()) {
+            roles = EnumSet.allOf(UserRole.class);
+        }
+        if (statuses == null || statuses.isEmpty()) {
+            statuses = EnumSet.allOf(UserStatus.class);
+        }
+        return userRepository.countByRoleInAndStatusIn(roles, statuses);
     }
 
     @Override

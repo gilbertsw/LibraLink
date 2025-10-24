@@ -1,7 +1,7 @@
 package id.co.libralink.apigateway.account.model.response;
 
-import id.co.libralink.apigateway.account.model.enums.UserRole;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserRole;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import lombok.*;
 
 @Getter

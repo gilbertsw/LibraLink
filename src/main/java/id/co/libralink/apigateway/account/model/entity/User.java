@@ -1,8 +1,8 @@
 package id.co.libralink.apigateway.account.model.entity;
 
 import id.co.libralink.common.base.model.entity.BaseEntity;
-import id.co.libralink.apigateway.account.model.enums.UserRole;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserRole;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldNameConstants;

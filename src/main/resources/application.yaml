@@ -96,12 +96,14 @@ endpoint:
     users: ${endpoint.admin.base}/users
     book: ${endpoint.admin.base}/books
     borrowing: ${endpoint.admin.base}/borrowings
+    dashboard: ${endpoint.admin.base}/dashboard
 
   user:
     base: /user
     users: ${endpoint.user.base}/users
     book: ${endpoint.user.base}/books
     borrowing: ${endpoint.user.base}/borrowings
+    dashboard: ${endpoint.user.base}/dashboard
 
   users:
     id: /{id:[0-9]+}

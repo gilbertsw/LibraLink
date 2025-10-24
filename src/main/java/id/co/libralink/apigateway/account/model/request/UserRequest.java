@@ -1,6 +1,6 @@
 package id.co.libralink.apigateway.account.model.request;
 
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

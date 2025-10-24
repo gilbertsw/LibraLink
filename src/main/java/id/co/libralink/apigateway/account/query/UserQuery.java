@@ -1,9 +1,8 @@
 package id.co.libralink.apigateway.account.query;
 
 import id.co.libralink.apigateway.account.model.entity.User;
-import id.co.libralink.apigateway.account.model.enums.UserRole;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
-import id.co.libralink.common.base.model.entity.BaseEntity;
+import id.co.libralink.apigateway.account.enums.UserRole;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import id.co.libralink.common.enums.OperationType;
 import id.co.libralink.common.query.SearchCriteria;
 import id.co.libralink.common.query.SearchQuery;

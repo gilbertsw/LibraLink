@@ -9,7 +9,7 @@ import com.nimbusds.jose.proc.SecurityContext;
 import id.co.libralink.apigateway.auth.filter.LoggingContextFilter;
 import id.co.libralink.apigateway.auth.service.impl.CustomUserDetailsServiceImpl;
 import id.co.libralink.apigateway.auth.constant.AuthConstant;
-import id.co.libralink.apigateway.account.model.enums.UserRole;
+import id.co.libralink.apigateway.account.enums.UserRole;
 import id.co.libralink.common.constant.CommonConstant;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

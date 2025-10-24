@@ -2,7 +2,7 @@ package id.co.libralink.apigateway.auth.model.entity;
 
 import id.co.libralink.apigateway.auth.constant.AuthConstant;
 import id.co.libralink.apigateway.account.model.entity.User;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

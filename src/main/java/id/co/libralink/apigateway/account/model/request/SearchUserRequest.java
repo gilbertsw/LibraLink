@@ -1,7 +1,7 @@
 package id.co.libralink.apigateway.account.model.request;
 
-import id.co.libralink.apigateway.account.model.enums.UserRole;
-import id.co.libralink.apigateway.account.model.enums.UserStatus;
+import id.co.libralink.apigateway.account.enums.UserRole;
+import id.co.libralink.apigateway.account.enums.UserStatus;
 import id.co.libralink.common.model.request.PaginationRequest;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
